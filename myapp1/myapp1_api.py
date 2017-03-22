@@ -12,4 +12,4 @@ from frappe.utils import cint
 def test():
 	r = {'Michael': 95, 'Bob': 75, 'Tracy': 85}
 	if r:
-		return json.dumps(r);
+		return r
