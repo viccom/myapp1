@@ -7,8 +7,11 @@ import requests
 from frappe import throw, msgprint, _
 from frappe.model.document import Document
 from frappe.utils import cint
+from frappe.api import validate_oauth
 
-@frappe.whitelist(allow_guest=True)
+validate_oauth()
+
+@frappe.whitelist()
 def test():
 	r = {'Michael': 95, 'Bob': 75, 'Tracy': 85}
 	if r:
