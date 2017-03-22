@@ -13,8 +13,8 @@ validate_oauth()
 
 @frappe.whitelist()
 def test():
-	#r = {'Michael': 95, 'Bob': 75, 'Tracy': 85}
-	r = frappe.form_dict.user or frappe.form_dict.name
+	r = {'Michael': 95, 'Bob': 75, 'Tracy': 85}
+	#r = frappe.form_dict.user or frappe.form_dict.name
 	if r:
 		return r
 
