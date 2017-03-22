@@ -7,7 +7,7 @@ import requests
 from frappe import throw, msgprint, _
 from frappe.model.document import Document
 from frappe.utils import cint
-from frappe.api import validate_oaut
+from frappe.api import validate_oauth
 
 validate_oauth()
 
