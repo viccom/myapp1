@@ -8,7 +8,6 @@ from frappe import throw, msgprint, _
 from frappe.model.document import Document
 from frappe.utils import cint
 from frappe.api import validate_oaut
-from myapp1.doctype.ceshi.ceshi import wechat_bind, wechat_unbind
 
 validate_oauth()
 
