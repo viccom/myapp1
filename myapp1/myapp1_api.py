@@ -13,6 +13,6 @@ validate_oauth()
 
 @frappe.whitelist()
 def test():
-	r = frappe.get_all("ceshi",)
+	r = frappe.get_all("ceshi")
 	if r:
 		return r
