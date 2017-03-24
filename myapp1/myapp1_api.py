@@ -13,6 +13,6 @@ validate_oauth()
 
 @frappe.whitelist()
 def test():
-	r = frappe.db.get_single_value("IOT HDB Settings", "authorization_code")
+	r = frappe.db.get_single_value("MyApp2")
 	if r:
 		return r
