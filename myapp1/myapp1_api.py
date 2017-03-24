@@ -13,6 +13,6 @@ validate_oauth()
 
 @frappe.whitelist()
 def test():
-	r = frappe.get_doc("MyApp2")
+	r = frappe.get_value("MyApp2")
 	if r:
 		return r
