@@ -1,49 +1,39 @@
 {% extends "templates/web.html" %}
+
+{% block title %}{{ _("My Account") }}{% endblock %}
+{% block header %}<h1>{{ _("My Account") }}</h1>{% endblock %}
+
 {% block page_content %}
 
-<div class="row">
-	<div class="col-sm-12">
-		<div class="hero">
-			<h1 class="text-center">111</h1>
+<!-- no-cache -->
+
+<div class="col-sm-8 pull-left">
+		<div class="row">
+
+			{% for uu in doc %}
+
+			<div class="col-xs-4 text-right text-muted">{{ _("USer Name") }}</div>
+			<div class="col-xs-8">{{ uu.name }}</div>
+
+			{% endfor %}
 		</div>
 	</div>
 </div>
-{% endblock %}
 
-{% block style %}
-<style>
-	.hero {
-		padding-top: 50px;
-		padding-bottom: 100px;
-	}
+<div class="col-sm-8 pull-left">
+		<div class="row">
 
-	.hero h1 {
-		font-size: 40px;
-		font-weight: 200;
-	}
+			{% for key in detail.__dict__ %}
+			<div class="col-xs-4 text-right text-muted">{{ key }}</div>
+			{% if detaildict[key] %}
+				<div class="col-xs-8">{{ detaildict[key] }}</div>
+			{% else %}
+				<div class="col-xs-8">NoNoNo</div>
+			{% endif %}
+			{% endfor %}
 
-	.home-login {
-		margin-top: 30px;
-	}
-	.btn-login {
-		width: 80px;
-	}
+		</div>
+	</div>
+</div>
 
-	.featured-product-heading, .all-products {
-		 text-transform: uppercase;
-		 letter-spacing: 0.5px;
-		 font-size: 12px;
-		 font-weight: 500;
-	}
-
-	.all-products {
-		 font-weight: 300;
-		 padding-left: 25px;
-		 padding-right: 25px;
-		 padding-top: 10px;
-		 padding-bottom: 10px;
-	}
-
-
-</style>
 {% endblock %}

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="frappe-192.168.174.140">
+  <component name="PublishConfigData" autoUpload="Always" serverName="frappe-192.168.174.140 (1)">
     <serverData>
-      <paths name="frappe-192.168.174.140">
+      <paths name="frappe-192.168.174.140 (1)">
         <serverdata>
           <mappings>
-            <mapping deploy="/home/frappe/frappe-bench/apps/myapp1" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>

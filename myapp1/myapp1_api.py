@@ -13,6 +13,6 @@ validate_oauth()
 
 @frappe.whitelist()
 def test():
-	r = frappe.get_all("ceshi")
+	r = frappe.get_doc("User", "3520845@qq.com")
 	if r:
 		return r
